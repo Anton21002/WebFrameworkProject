@@ -1,2 +1,26 @@
 <h1>{{pagetitle}}</h1>
-<p class="descript">Welcome to our online store.</p>
+{{#if desc}}
+    <p class="descript">{{desc}}</p>
+{{else}}
+    <p>No content</p>
+{{/if}}
+
+<div class="cards">
+    {{#each items}}
+        <div class="card">
+            <h3>{{this.CloName}}</h3>
+            <img src={{this.CloImgLink}}>
+            <div class="iteminfo">
+            <p>Clothing Type : {{this.CloType}}</p>
+            <p>Clothes Style : {{this.CloStyle}}</p>
+            <p>Avalible Sizes : {{this.CloSizes}}</p>
+            <p>Brand : {{this.CloBrand}}</p>
+            <p>Material : {{this.CloMat}}</p>
+            <p>Primary Colors : {{this.CloColorsPrim}}</p>
+            <p>Clothes Design : {{this.CloDes}}</p>
+            </div>
+            <h4>Price {{this.priceEuro}} €</h4>
+            <h5>On discount : {{this.onDiscount}}</h5>
+        </div>
+    {{/each}}
+</div>
