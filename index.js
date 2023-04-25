@@ -15,8 +15,8 @@ app.set('view engine', 'handlebars');
 
 //Backup Mock Database
 //Retrieve local JSON backup database 
-/*let items = require('C:\\Users\\Anton\\Documents\\GitHub\\WebFrameworkProject\\backupitem.json');
-console.log(items);*/
+let items = require('C:\\Users\\Anton\\Documents\\GitHub\\WebFrameworkProject\\backupitem.json');
+//console.log(items);
 //In-code database
 /*let items = [{id: 1,
         CloName: 'Trousers Male',
@@ -63,6 +63,7 @@ console.log(items);*/
         priceEuro: 95.04,
         onDiscount: false }]
 */
+//End of Backup Database
 app.use(express.static('public'));
 //http://localhost:3000/
 app.get('/', (req, res) => {

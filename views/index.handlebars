@@ -8,19 +8,22 @@
 <div class="cards">
     {{#each items}}
         <div class="card">
-            <h3>{{this.CloName}}</h3>
+            <h3 tabindex="0">{{this.CloName}}</h3>
             <img src={{this.CloImgLink}}>
             <div class="iteminfo">
-            <p>Clothing Type : {{this.CloType}}</p>
-            <p>Clothes Style : {{this.CloStyle}}</p>
-            <p>Avalible Sizes : {{this.CloSizes}}</p>
-            <p>Brand : {{this.CloBrand}}</p>
-            <p>Material : {{this.CloMat}}</p>
-            <p>Primary Colors : {{this.CloColorsPrim}}</p>
-            <p>Clothes Design : {{this.CloDes}}</p>
+            <p tabindex="0">Clothing Type : {{this.CloType}}</p>
+            <p tabindex="0">Clothes Style : {{this.CloStyle}}</p>
+            <p tabindex="0">Avalible Sizes : {{this.CloSizes}}</p>
+            <p tabindex="0">Brand : {{this.CloBrand}}</p>
+            <p tabindex="0">Material : {{this.CloMat}}</p>
+            <p tabindex="0">Avalible Colors : {{this.CloColorsPrim}}</p>
+            </div><div class="pricing">
+            <h4 tabindex="0">Price {{this.priceEuro}} €</h4>
+            <h5 tabindex="0">On discount : {{this.onDiscount}}</h5>
             </div>
-            <h4>Price {{this.priceEuro}} €</h4>
-            <h5>On discount : {{this.onDiscount}}</h5>
         </div>
     {{/each}}
 </div>
+<!--add Image by rawpixel.com on Freepik to the 2nd and 4th picture in the footer
+add Image by luis_molinero on Freepik to the 3rd picture in the footer
+ -->
