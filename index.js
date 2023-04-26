@@ -12,6 +12,8 @@ app.engine('handlebars', exphbs.engine({
 
 app.set('view engine', 'handlebars');
 
+app.use(express.static('public'));
+
 const dbURI = 'mongodb+srv://group4:<password>@cluster0.abip4ba.mongodb.net/group4?retryWrites=true&w=majority'
 
 mongoose.connect(dbURI)
