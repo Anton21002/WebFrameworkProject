@@ -39,7 +39,7 @@ header {
 
 .navigation a {
     position: relative;
-    font-size: 1.1em;
+    font-size: 1.3em;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
@@ -65,7 +65,7 @@ header {
     transform: scaleX(1);
 }
 
-.navigation .btnLogin-popup {
+.btnLogin-popup {
     width: 130px;
     height: 50px;
     background: transparent;
@@ -79,7 +79,7 @@ header {
     transition: .5s;
 }
 
-.navigation .btnLogin-popup:hover {
+.btnLogin-popup:hover {
     background: #fff;
     color: #162938;
 }
@@ -256,4 +256,78 @@ header {
 
 .login-register p a:hover {
     text-decoration: underline;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    color: #8a8a8a;
+    height: 250px;
+    font-size: 14px;
+    padding: 20px 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+}
+
+.footer p {
+    color: #8a8a8a;
+}
+
+.footer h3 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.footer li {
+    font-size: 16px;
+}
+
+.footer a {
+    color: #8a8a8a;
+    text-decoration: none;
+}
+
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+    min-width: 450px;
+}
+
+.footer-col-1 {
+    flex-basis: 25%;
+}
+
+.footer-col-2, .footer-col-3, .footer-col-4 {
+    flex-basis: 25%;
+    text-align: center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.app-logo {
+    margin-top: 20px;
+}
+
+.app-logo img {
+    width: 150px;
+}
+
+.footer hr {
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+
+.copyright {
+    text-align: center;
 }
