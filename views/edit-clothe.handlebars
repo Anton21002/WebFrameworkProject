@@ -1,0 +1,59 @@
+
+{{!-- Extend the main layout --}}
+{{#extend "layout/main"}}
+  {{!-- Set the title --}}
+  {{#content "title"}}Add Clothe{{/content}}
+  {{!-- Define the page content --}}
+  {{#content "body"}}<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Edit Clothe</title>
+</head>
+<body>
+    <h1>Edit Clothe</h1>
+    <form action="/clothes/<%= clothe._id %>?_method=PUT" method="post">
+        <div>
+            <label for="cloName">Name:</label>
+            <input type="text" name="cloName" id="cloName" value="<%= clothe.cloName %>">
+        </div>
+        <div>
+            <label for="cloImgLink">Image Link:</label>
+            <input type="text" name="cloImgLink" id="cloImgLink" value="<%= clothe.cloImgLink %>">
+        </div>
+        <div>
+            <label for="cloType">Type:</label>
+            <input type="text" name="cloType" id="cloType" value="<%= clothe.cloType %>">
+        </div>
+        <div>
+            <label for="cloStyle">Style:</label>
+            <input type="text" name="cloStyle" id="cloStyle" value="<%= clothe.cloStyle %>">
+        </div>
+        <div>
+            <label for="cloSizes">Sizes:</label>
+            <input type="text" name="cloSizes" id="cloSizes" value="<%= clothe.cloSizes %>">
+        </div>
+        <div>
+            <label for="cloBrand">Brand:</label>
+            <input type="text" name="cloBrand" id="cloBrand" value="<%= clothe.cloBrand %>">
+        </div>
+        <div>
+            <label for="cloMat">Material:</label>
+            <input type="text" name="cloMat" id="cloMat" value="<%= clothe.cloMat %>">
+        </div>
+        <div>
+            <label for="cloColorPrim">Primary Color:</label>
+            <input type="text" name="cloColorPrim" id="cloColorPrim" value="<%= clothe.cloColorPrim %>">
+        </div>
+        <div>
+            <label for="priceEuro">Price:</label>
+            <input type="number" name="priceEuro" id="priceEuro" value="<%= clothe.priceEuro %>">
+        </div>
+        <div>
+            <label for="onDiscount">On Discount:</label>
+            <input type="checkbox" name="onDiscount" id="onDiscount" <% if (clothe.onDiscount) { %>checked<% } %>>
+        </div>
+        <input type="button" value="Update Clothe">
+    </form>
+</body>
+</html>
