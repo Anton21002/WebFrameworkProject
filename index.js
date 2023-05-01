@@ -80,8 +80,16 @@ app.get('/admin', (req, res) => {
     res.render('admin',
         {
             pagetitle: "Admin page",
-             });
+        });
 });
+
+app.get('/login', (req, res) => {
+    res.render('login',
+        {
+            pagetitle: "Login page",
+        });
+});
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Listening port ${PORT}`));
