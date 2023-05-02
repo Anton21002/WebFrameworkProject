@@ -1,0 +1,37 @@
+<h3><a class="btn btn-info" href="/clothe"><i class="fa fa-plus"></i> Create New</a> Clothe Items</h3>
+<table>
+    <thead>
+        <tr>
+            <th>Clothe Name</th>
+            {{!-- <th>Image</th> --}}
+            <th>Clothing Type</th>
+            <th>Clothe Style</th>
+            <th>Available Size</th>
+            <th>Brand</th>
+            <th>Material</th>
+            <th>Available Color</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+            <tr>
+                <td>{{this.cloName}}</td>
+                {{!--<td><img src="{{this.cloImgLink}}"></td> --}}
+                <td>{{this.cloType}}</td>
+                <td>{{this.cloStyle}}</td>
+                <td>{{this.cloSizes}}</td>
+                <td>{{this.cloBrand}}</td>
+                <td>{{this.cloMat}}</td>
+                <td>{{this.cloColorPrim}}</td>
+                <td>
+                    <a href="/clothe/{{this._id}}">Update</a>
+                </td>
+                <td>
+                    <a href="/clothe/delete/{{this._id}}" onclick="return confirm('DELETE! Really?');">Delete</a>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>

@@ -1,20 +1,22 @@
 {
-  "name": "webframeworkproject",
+  "name": "final",
   "version": "1.0.0",
-  "description": "Web framework project for Backend Web development",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "start" : "node index",
-    "dev" : "nodemon index",
+    "start": "node index",
+    "dev": "nodemon index",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "express-handlebars": "^7.0.7",
-    "mongoose": "^7.0.5"
+    "mongoose": "^7.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"

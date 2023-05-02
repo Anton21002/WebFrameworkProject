@@ -16,4 +16,7 @@ const clotheSchema = new mongoose.Schema({
     onDiscount : Boolean
 });
 
-module.exports = mongoose.model('Clothe', clotheSchema);
+
+const Clothe = mongoose.model('Clothe', clotheSchema);
+
+module.exports = Clothe;
