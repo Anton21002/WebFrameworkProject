@@ -1,0 +1,59 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/clothe" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{clothe._id}}">
+    <div class="form-group">
+        <label for="Name">Clothe Name</label>
+        <input type="text" class="form-control" name="cloName" placeholder="Clothe Name" value="{{clothe.cloName}}"> 
+    </div>
+    <div class="form-group">
+        <label for="Clothe Image Link">Clothe Image Link</label>
+        <input type="text" class="form-control" name="cloImgLink" placeholder="Clothe Image Link" value="{{clothe.cloImgLink}}"> 
+    </div>
+     <div class="form-group">
+        <label for="Clothe Type">Clothe Type</label>
+        <input type="text" class="form-control" name="cloType" placeholder="Clothe Type" value="{{clothe.cloType}}"> 
+    </div>
+    <div class="form-group">
+        <label for="Clothe Style">Clothe Style</label>
+        <input type="text" class="form-control" name="cloStyle" placeholder="Clothe Style" value="{{clothe.cloStyle}}"> 
+    </div>
+    <div>
+        <label for="cloSizes">Select Size:</label>
+            <select id="cloSizes" name="cloSizes" value="{{clothe.cloSizes}}">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+    </div>
+    <div class="form-group">
+        <label for="Clothe Brand">Clothe Brand</label>
+        <input type="text" class="form-control" name="cloBrand" placeholder="Clothe Brand" value="{{clothe.cloBrand}}"> 
+    </div>
+    <div class="form-group col-md-6">
+        <label for="Clothe Material">Clothe Material</label>
+        <input type="text" class="form-control" name="cloMat" placeholder="Clothe Material" value="{{clothe.cloMat}}"> 
+    </div>
+    <div class="form-group col-md-6">
+        <label for="Primary Color">Primary Color</label>
+        <input type="text" class="form-control" name="cloColorPrim" placeholder="Primary Color" value="{{clothe.cloColorPrim}}"> 
+    </div>
+    <div class="form-group col-md-6">
+        <label for="priceEuro">Price</label>
+        <input type="number" id="priceEuro" name="priceEuro" value="{{clothe.priceEuro}}">
+    </div>
+    <div class="form-group col-md-6">
+        <label for="onDiscount">Discount:</label>
+            <select id="onDiscount" name="onDiscount" value="{{clothe.onDiscount}}">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/clothe/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+    </form>
+
+    
