@@ -9,6 +9,7 @@ const Clothe = require('../models/Clothe');
 const dbURI = 'mongodb+srv://'+ process.env.DBUSER +':'+ process.env.DBPASSWD +''+ process.env.CLUSTER +'.mongodb.net/'+ process.env.DB +'?retryWrites=true&w=majority'
 mongoose.connect(dbURI)
 
+// Create and Update a record
 router.get('/', (req,res) => {
     res.render("clothe/addOrEdit", {
         viewTitle : "Insert New Clothes"
@@ -67,28 +68,7 @@ async function updateRecord(req, res) {
   }
 }
 
-// async function updateRecord(req, res) {
-//   try {
-//     const doc = await Clothe.findOneAndUpdate({ _id: req.body._id }, req.body, { new: true });
-//     // console.log('Updated doc:', doc);
-//     res.redirect('clothe/list');
-//   } catch (err) {
-//     console.log('Error during update: ' + err);
-//   }
-// }
 
-
-// router.get('/:id', async (req, res) => {
-//   try {
-//     const doc = await Clothe.findById(req.params.id);
-//     res.render("clothe/addOrEdit", {
-//       viewTitle: "Update Clothe Details",
-//       clothe: doc
-//     });
-//   } catch (err) {
-//     console.log('Error while retrieving data: ' + err);
-//   }
-// });
 
 // update record
 router.get('/:id', async (req, res) => {
@@ -103,18 +83,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-//delete a cloth
-// router.get('/delete/:id', (req, res) => {
-//   Clothe.findByIdAndDelete(req.params.id, (err, doc) => {
-//     if (!err) {
-//       res.redirect('/clothe/list')
-//     }
-//     else {
-//       console.log('Error in deleting item:' + err);
-//     }
-//   });
-// });
-
+// Delete a record
 router.get('/delete/:id', async (req, res) => {
   try {
     await Clothe.findByIdAndDelete(req.params.id);

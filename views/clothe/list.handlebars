@@ -1,9 +1,10 @@
-<h3><a class="btn btn-info" href="/clothe"><i class="fa fa-plus"></i> Create New</a> Clothe Items</h3>
-<table>
-    <thead>
+<h1><a class="btn btn-danger" href="/clothe"><i class="fa fa-plus"></i> Create New</a> Clothes In Stock</h1>
+
+<table class="table table-striped margin-top: 20px">
+    <thead class="table-dark">
         <tr>
             <th>Clothe Name</th>
-            {{!-- <th>Image</th> --}}
+            <th>Image</th>
             <th>Clothing Type</th>
             <th>Clothe Style</th>
             <th>Available Size</th>
@@ -12,13 +13,14 @@
             <th>Available Color</th>
             <th>Update</th>
             <th>Delete</th>
+            
         </tr>
     </thead>
-    <tbody>
+    <tbody class="table-group-divider">
         {{#each list}}
             <tr>
                 <td>{{this.cloName}}</td>
-                {{!--<td><img src="{{this.cloImgLink}}"></td> --}}
+                <td><img src="{{this.cloImgLink}}" width="90px" height="90px" alt="{{this.cloName}}"></td>
                 <td>{{this.cloType}}</td>
                 <td>{{this.cloStyle}}</td>
                 <td>{{this.cloSizes}}</td>
@@ -26,10 +28,10 @@
                 <td>{{this.cloMat}}</td>
                 <td>{{this.cloColorPrim}}</td>
                 <td>
-                    <a href="/clothe/{{this._id}}">Update</a>
+                    <a href="/clothe/{{this._id}}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
                 </td>
                 <td>
-                    <a href="/clothe/delete/{{this._id}}" onclick="return confirm('DELETE! Really?');">Delete</a>
+                    <a href="/clothe/delete/{{this._id}}" onclick="return confirm('DELETE! Really?');"><i class="fa fa-trash"></i> </a>
                 </td>
             </tr>
         {{/each}}

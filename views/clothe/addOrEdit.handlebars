@@ -1,25 +1,25 @@
-<h3>{{viewTitle}}</h3>
+<h1>{{viewTitle}}</h1>
 
 <form action="/clothe" method="POST" autocomplete="off">
     <input type="hidden" name="_id" value="{{clothe._id}}">
-    <div class="form-group">
+    <div class="mb-3">
         <label for="Name">Clothe Name</label>
-        <input type="text" class="form-control" name="cloName" placeholder="Clothe Name" value="{{clothe.cloName}}"> 
+        <input type="text" class="form-control" name="cloName" placeholder="Enter Clothe Name here" value="{{clothe.cloName}}" aria-label="Clothe Name" required aria-required="true"> 
     </div>
-    <div class="form-group">
+    <div class="mb-3">
         <label for="Clothe Image Link">Clothe Image Link</label>
-        <input type="text" class="form-control" name="cloImgLink" placeholder="Clothe Image Link" value="{{clothe.cloImgLink}}"> 
+        <input type="text" class="form-control" name="cloImgLink" placeholder="Enter Clothe Image Link here" value="{{clothe.cloImgLink}}" aria-label="Clothe Image"> 
     </div>
-     <div class="form-group">
+     <div class="mb-3">
         <label for="Clothe Type">Clothe Type</label>
-        <input type="text" class="form-control" name="cloType" placeholder="Clothe Type" value="{{clothe.cloType}}"> 
+        <input type="text" class="form-control" name="cloType" placeholder="Enter Clothe Type here" value="{{clothe.cloType}}" aria-label="Clothe Type"> 
     </div>
-    <div class="form-group">
+    <div class="mb-3">
         <label for="Clothe Style">Clothe Style</label>
-        <input type="text" class="form-control" name="cloStyle" placeholder="Clothe Style" value="{{clothe.cloStyle}}"> 
+        <input type="text" class="form-control" name="cloStyle" placeholder="Enter Clothe Style here" value="{{clothe.cloStyle}}" aria-label="Clothe Style"> 
     </div>
     <div>
-        <label for="cloSizes">Select Size:</label>
+        <label for="cloSizes" role="listbox">Select Size:</label>
             <select id="cloSizes" name="cloSizes" value="{{clothe.cloSizes}}">
                 <option value="S">S</option>
                 <option value="M">M</option>
@@ -27,31 +27,31 @@
                 <option value="XL">XL</option>
             </select>
     </div>
-    <div class="form-group">
+    <div class="mb-3">
         <label for="Clothe Brand">Clothe Brand</label>
-        <input type="text" class="form-control" name="cloBrand" placeholder="Clothe Brand" value="{{clothe.cloBrand}}"> 
+        <input type="text" class="form-control" name="cloBrand" placeholder="Enter Clothe Brand here" value="{{clothe.cloBrand}}" aria-label="Clothe Brand"> 
     </div>
-    <div class="form-group col-md-6">
+    <div class="mb-3">
         <label for="Clothe Material">Clothe Material</label>
-        <input type="text" class="form-control" name="cloMat" placeholder="Clothe Material" value="{{clothe.cloMat}}"> 
+        <input type="text" class="form-control" name="cloMat" placeholder="Enter Clothe Material here" value="{{clothe.cloMat}}" aria-label="Clothe Material"> 
     </div>
-    <div class="form-group col-md-6">
+    <div class="mb-3">
         <label for="Primary Color">Primary Color</label>
-        <input type="text" class="form-control" name="cloColorPrim" placeholder="Primary Color" value="{{clothe.cloColorPrim}}"> 
+        <input type="text" class="form-control" name="cloColorPrim" placeholder="Enter Primary Color here" value="{{clothe.cloColorPrim}}" aria-label="Clothe Primary Color"> 
     </div>
-    <div class="form-group col-md-6">
+    <div class="mb-3">
         <label for="priceEuro">Price</label>
-        <input type="number" id="priceEuro" name="priceEuro" value="{{clothe.priceEuro}}">
+        <input type="number" id="priceEuro" name="priceEuro" placeholder="Enter Price here" value="{{clothe.priceEuro}}" aria-label="Clothe Price">
     </div>
-    <div class="form-group col-md-6">
+    <div class="mb-3">
         <label for="onDiscount">Discount:</label>
             <select id="onDiscount" name="onDiscount" value="{{clothe.onDiscount}}">
                 <option value="yes">Yes</option>
                 <option value="no">No</option>
             </select>
     </div>
-    <div class="form-group">
-        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-info" role="button"><i class="fa fa-database"></i> Submit</button>
         <a class="btn btn-secondary" href="/clothe/list"><i class="fa fa-list-alt"></i> View All</a>
     </div>
     </form>
