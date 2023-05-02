@@ -1,0 +1,50 @@
+{{!-- Extend the main layout --}}
+{{#extend "layout/main"}}
+  {{!-- Set the title --}}
+  {{#content "title"}}Add Clothe{{/content}}
+  {{!-- Define the page content --}}
+  {{#content "body"}}
+<h1>Clothes List</h1>
+
+{{#if clothes}}
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Style</th>
+        <th>Sizes</th>
+        <th>Material</th>
+        <th>Brand</th>
+        <th>Primary Color</th>
+        <th>Price (Euro)</th>
+        <th>On Discount</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each clothes}}
+        <tr>
+          <td>{{cloName}}</td>
+          <td>{{cloType}}</td>
+          <td>{{cloStyle}}</td>
+          <td>{{cloSizes}}</td>
+          <td>{{cloMat}}</td>
+          <td>{{cloBrand}}</td>
+          <td>{{cloColorPrim}}</td>
+          <td>{{priceEuro}}</td>
+          <td>{{#if onDiscount}}Yes{{else}}No{{/if}}</td>
+          <td><a href="/clothes/{{_id}}/edit">Edit</a></td>
+          <td>
+            <form method="POST" action="/clothes/{{_id}}?_method=DELETE">
+              <button type="button">Delete</button>
+            </form>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+{{else}}
+  <p>No clothes to display</p>
+{{/if}}
+
+<a href="/clothes/new">Add New Clothe</a>

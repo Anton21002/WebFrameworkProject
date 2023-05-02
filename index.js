@@ -87,6 +87,7 @@ app.get('/login', (req, res) => {
     res.render('login',
         {
             pagetitle: "Login page",
+            desc : "Login",
         });
 });
 
