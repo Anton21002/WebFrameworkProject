@@ -1,0 +1,94 @@
+{{!-- Extend the main layout --}}
+{{#extend "layout/main"}}
+  {{!-- Set the title --}}
+  {{#content "title"}}Add Clothe{{/content}}
+  {{!-- Define the page content --}}
+  {{#content "body"}}
+<h1>Add Clothe</h1>
+
+<form method="POST" action="/clothes">
+  <label for="cloName">Name:</label>
+  <input type="text" id="cloName" name="cloName" required>
+
+  <label for="cloImgLink">Image Link:</label>
+  <input type="text" id="cloImgLink" name="cloImgLink">
+
+  <label for="cloType">Type:</label>
+  <input type="text" id="cloType" name="cloType" required>
+
+  <label for="cloStyle">Style:</label>
+  <input type="text" id="cloStyle" name="cloStyle">
+
+  <label for="cloSizes">Sizes:</label>
+  <input type="text" id="cloSizes" name="cloSizes" required>
+
+  <label for="cloBrand">Brand:</label>
+  <input type="text" id="cloBrand" name="cloBrand">
+
+  <label for="cloMat">Material:</label>
+  <input type="text" id="cloMat" name="cloMat">
+
+  <label for="cloColorPrim">Primary Color:</label>
+  <input type="text" id="cloColorPrim" name="cloColorPrim">
+
+  <label for="priceEuro">Price in Euro:</label>
+  <input type="number" id="priceEuro" name="priceEuro" required>
+
+  <label for="onDiscount">On Discount:</label>
+  <input type="checkbox" id="onDiscount" name="onDiscount">
+
+  <button type="button">Add Clothe</button>
+</form>
+
+<a href="/clothes">Back to List</a>
+
+{{!-- const addClotheForm = document.querySelector('form');
+
+addClotheForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const clotheName = addClotheForm.elements.cloName.value;
+  const clotheImgLink = addClotheForm.elements.cloImgLink.value;
+  const clotheType = addClotheForm.elements.cloType.value;
+  const clotheStyle = addClotheForm.elements.cloStyle.value;
+  const clotheSizes = addClotheForm.elements.cloSizes.value;
+  const clotheBrand = addClotheForm.elements.cloBrand.value;
+  const clotheMaterial = addClotheForm.elements.cloMat.value;
+  const clotheColorPrim = addClotheForm.elements.cloColorPrim.value;
+  const clothePriceEuro = addClotheForm.elements.priceEuro.value;
+  const clotheOnDiscount = addClotheForm.elements.onDiscount.checked;
+
+  try {
+    const response = await fetch('/clothes', {
+      method: 'POST',
+      body: JSON.stringify({
+        cloName: clotheName,
+        cloImgLink: clotheImgLink,
+        cloType: clotheType,
+        cloStyle: clotheStyle,
+        cloSizes: clotheSizes,
+        cloBrand: clotheBrand,
+        cloMat: clotheMaterial,
+        cloColorPrim: clotheColorPrim,
+        priceEuro: clothePriceEuro,
+        onDiscount: clotheOnDiscount
+      }),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log('Success:', data);
+
+    // Redirect to the updated list of clothes
+    window.location.replace('/clothes');
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Failed to add clothe!');
+  }
+}); --}}
