@@ -8,39 +8,39 @@
 
 <form method="POST" action="/clothes">
   <label for="cloName">Name:</label>
-  <input type="text" id="cloName" name="cloName" required>
+  <input type="text" id="cloName" name="cloName" tabindex="0" required>
 
   <label for="cloImgLink">Image Link:</label>
-  <input type="text" id="cloImgLink" name="cloImgLink">
+  <input type="text" id="cloImgLink" name="cloImgLink" tabindex="0">
 
   <label for="cloType">Type:</label>
-  <input type="text" id="cloType" name="cloType" required>
+  <input type="text" id="cloType" name="cloType" required tabindex="0">
 
   <label for="cloStyle">Style:</label>
-  <input type="text" id="cloStyle" name="cloStyle">
+  <input type="text" id="cloStyle" name="cloStyle" tabindex="0">
 
   <label for="cloSizes">Sizes:</label>
-  <input type="text" id="cloSizes" name="cloSizes" required>
+  <input type="text" id="cloSizes" name="cloSizes" required tabindex="0">
 
   <label for="cloBrand">Brand:</label>
-  <input type="text" id="cloBrand" name="cloBrand">
+  <input type="text" id="cloBrand" name="cloBrand" tabindex="0">
 
   <label for="cloMat">Material:</label>
-  <input type="text" id="cloMat" name="cloMat">
+  <input type="text" id="cloMat" name="cloMat" tabindex="0">
 
   <label for="cloColorPrim">Primary Color:</label>
-  <input type="text" id="cloColorPrim" name="cloColorPrim">
+  <input type="text" id="cloColorPrim" name="cloColorPrim" tabindex="0">
 
   <label for="priceEuro">Price in Euro:</label>
-  <input type="number" id="priceEuro" name="priceEuro" required>
+  <input type="number" id="priceEuro" name="priceEuro" required tabindex="0">
 
   <label for="onDiscount">On Discount:</label>
-  <input type="checkbox" id="onDiscount" name="onDiscount">
+  <input type="checkbox" id="onDiscount" name="onDiscount" tabindex="0">
 
-  <button type="button">Add Clothe</button>
+  <button type="button" tabindex="0">Add Clothe</button>
 </form>
 
-<a href="/clothes">Back to List</a>
+<a href="/clothes" tabindex="0">Back to List</a>
 
 {{!-- const addClotheForm = document.querySelector('form');
 

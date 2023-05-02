@@ -5,9 +5,9 @@
     <p>No content</p>
 {{/if}}
 
-<div class="cards">
+<div class="indexcards">
     {{#each items}}
-        <div class="card">
+        <div class="indexcard">
             <h3 tabindex="0">{{this.CloName}}</h3>
             <img class="Clothimg" src={{this.CloImgLink}} alt={{this.CloName}}>
             <div class="iteminfo">
@@ -17,9 +17,9 @@
             <p tabindex="0">Brand : {{this.CloBrand}}</p>
             <p tabindex="0">Material : {{this.CloMat}}</p>
             <p tabindex="0">Avalible Colors : {{this.CloColorsPrim}}</p>
-            </div><div class="pricing">
+            </div><div class="indexpricing">
             <h4 tabindex="0">Price {{this.priceEuro}} €</h4>
-            <h5 tabindex="0">On discount : {{this.onDiscount}}</h5>
+            <h5 tabindex="0">On discount : {{#if onDiscount}}Yes{{else}}No{{/if}}</h5>
             </div>
         </div>
     {{/each}}

@@ -4,24 +4,24 @@
   {{#content "title"}}{{clothe.cloName}} Details{{/content}}
   {{!-- Define the page content --}}
   {{#content "body"}}
-    <h1>{{clothe.cloName}}</h1>
+    <h1 tabindex="0">{{clothe.cloName}}</h1>
 
     <img src="{{clothe.cloImgLink}}" alt="{{clothe.cloName}}">
 
     <ul>
-      <li>Type: {{clothe.cloType}}</li>
-      <li>Style: {{clothe.cloStyle}}</li>
-      <li>Sizes: {{clothe.cloSizes}}</li>
-      <li>Brand: {{clothe.cloBrand}}</li>
-      <li>Material: {{clothe.cloMat}}</li>
-      <li>Primary Color: {{clothe.cloColorPrim}}</li>
-      <li>Price in Euro: {{clothe.priceEuro}}</li>
-      <li>On Discount: {{clothe.onDiscount ? 'Yes' : 'No'}}</li>
+      <li tabindex="0">Type: {{clothe.cloType}}</li>
+      <li tabindex="0">Style: {{clothe.cloStyle}}</li>
+      <li tabindex="0">Sizes: {{clothe.cloSizes}}</li>
+      <li tabindex="0">Brand: {{clothe.cloBrand}}</li>
+      <li tabindex="0">Material: {{clothe.cloMat}}</li>
+      <li tabindex="0">Primary Color: {{clothe.cloColorPrim}}</li>
+      <li tabindex="0">Price in Euro: {{clothe.priceEuro}}</li>
+      <li tabindex="0">On Discount: {{clothe.onDiscount ? 'Yes' : 'No'}}</li>
     </ul>
 
-    <a href="/clothes/{{clothe._id}}/edit">Edit</a>
+    <a href="/clothes/{{clothe._id}}/edit" tabindex="0">Edit</a>
     <form action="/clothes/{{clothe._id}}?_method=DELETE" method="POST">
-      <button>Delete</button>
+      <button tabindex="0">Delete</button>
     </form>
 
     <a href="/clothes">Back to List</a>

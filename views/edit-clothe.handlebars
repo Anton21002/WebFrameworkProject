@@ -10,45 +10,45 @@ Extend the main layout
 <form action="/clothes/{{clothe._id}}?_method=PUT" method="post">
 <div class="form-group">
 <label for="cloName">Name:</label>
-<input type="text" name="cloName" id="cloName" value="{{clothe.cloName}}" class="form-control">
+<input type="text" name="cloName" id="cloName" value="{{clothe.cloName}}" class="form-control" tabindex="0">
 </div>
 <div class="form-group">
 <label for="cloImgLink">Image Link:</label>
-<input type="text" name="cloImgLink" id="cloImgLink" value="{{clothe.cloImgLink}}" class="form-control">
+<input type="text" name="cloImgLink" id="cloImgLink" value="{{clothe.cloImgLink}}" class="form-control" tabindex="0">
 </div>
 <div class="form-group">
 <label for="cloType">Type:</label>
-<input type="text" name="cloType" id="cloType" value="{{clothe.cloType}}" class="form-control">
+<input type="text" name="cloType" id="cloType" value="{{clothe.cloType}}" class="form-control" tabindex="0">
 </div>
 <div class="form-group">
 <label for="cloStyle">Style:</label>
-<input type="text" name="cloStyle" id="cloStyle" value="{{clothe.cloStyle}}" class="form-control">
+<input type="text" name="cloStyle" id="cloStyle" value="{{clothe.cloStyle}}" class="form-control"tabindex="0">
 </div>
 <div class="form-group">
 <label for="cloSizes">Sizes:</label>
-<input type="text" name="cloSizes" id="cloSizes" value="{{clothe.cloSizes}}" class="form-control">
+<input type="text" name="cloSizes" id="cloSizes" value="{{clothe.cloSizes}}" class="form-control" tabindex="0">
 </div>
 <div class="form-group">
 <label for="cloBrand">Brand:</label>
-<input type="text" name="cloBrand" id="cloBrand" value="{{clothe.cloBrand}}" class="form-control">
+<input type="text" name="cloBrand" id="cloBrand" value="{{clothe.cloBrand}}" class="form-control" tabindex="0">
 </div>
 <div class="form-group">
 <label for="cloMat">Material:</label>
-<input type="text" name="cloMat" id="cloMat" value="{{clothe.cloMat}}" class="form-control">
+<input type="text" name="cloMat" id="cloMat" value="{{clothe.cloMat}}" class="form-control" tabindex="0">
 </div>
 <div class="form-group">
 <label for="cloColorPrim">Primary Color:</label>
-<input type="text" name="cloColorPrim" id="cloColorPrim" value="{{clothe.cloColorPrim}}" class="form-control">
+<input type="text" name="cloColorPrim" id="cloColorPrim" value="{{clothe.cloColorPrim}}" class="form-control" tabindex="0">
 </div>
 <div class="form-group">
 <label for="priceEuro">Price:</label>
-<input type="number" name="priceEuro" id="priceEuro" value="{{clothe.priceEuro}}" class="form-control">
+<input type="number" name="priceEuro" id="priceEuro" value="{{clothe.priceEuro}}" class="form-control" tabindex="0">
 </div>
 <div class="form-group">
 <label for="onDiscount">On Discount:</label>
-<input type="checkbox" name="onDiscount" id="onDiscount" {{#if clothe.onDiscount}}checked{{/if}} class="form-control">
+<input type="checkbox" name="onDiscount" id="onDiscount" {{#if clothe.onDiscount}}checked{{/if}} class="form-control" tabindex="0">
 </div>
-<input type="submit" value="Update Clothe" class="btn btn-primary">
+<input type="submit" value="Update Clothe" class="btn btn-primary" tabindex="0">
 </form>
 {{/content}}
 {{/extend}}
