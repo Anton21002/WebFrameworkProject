@@ -15,7 +15,7 @@ app.set('view engine', 'handlebars');
 
 //Backup Mock Database
 //Retrieve local JSON backup database 
-let items = require('C:\\Users\\Anton\\Documents\\GitHub\\WebFrameworkProject\\backupitem.json');
+//let items = require('C:\\Users\\Anton\\Documents\\GitHub\\WebFrameworkProject\\backupitem.json');
 //console.log(items);
 //In-code database
 /*let items = [{id: 1,
