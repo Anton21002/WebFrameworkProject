@@ -9,7 +9,7 @@ const collection = require("./mongodb");
 const { error } = require('console');
 const bodyParser = require('body-parser')
 const nodemailer = require('nodemailer');
-const tempelatePath = path.join(__dirname, '../views')
+const tempelatePath = path.join(__dirname, '../WebFrameworkProject/views')
 
 app.use(express.json())
 app.set("view engine", "hbs")
@@ -27,7 +27,7 @@ const transporter = nodemailer.createTransport({
     service: 'hotmail',
     auth: {
         user: 'orgesgashi41@outlook.com',
-        pass: 'eliona260121O' /*actual password*/
+        pass: 'Node1@' /*actual password*/
     },
     tls: {
         rejectUnauthorized: false

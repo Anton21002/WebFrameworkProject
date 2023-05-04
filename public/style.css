@@ -144,7 +144,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('background.jpg') no-repeat;  
+    background: url('background.jpg') no-repeat;
     background-size: cover;
     background-position: center;
 }
@@ -170,6 +170,7 @@ header {
 }
 
 .navigation a {
+    align-items: center;
     position: relative;
     font-size: 1.3em;
     color: #fff;
@@ -372,6 +373,13 @@ header {
     font-weight: 500;
 }
 
+.error-message {
+    padding-top: 10px;
+    color: #ff0000;
+    text-align: center;
+    font-weight: 600;
+}
+
 .login-register {
     font-size: .9em;
     color: #fff;
@@ -428,17 +436,25 @@ header {
     text-decoration: none;
 }
 
-.footer-col{
-    min-width: 450px; flex-basis: 25%;text-align: center; display: flex;
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4 {
+    min-width: 450px;
 }
 
+.footer-col-1 {
+    flex-basis: 25%;
+}
+
+.footer-col-2, .footer-col-3, .footer-col-4 {
+    flex-basis: 25%;
+    text-align: center;
+}
 
 ul {
     list-style-type: none;
 }
 
 .app-logo {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .app-logo img {
@@ -452,7 +468,34 @@ ul {
     margin: 20px 0;
 }
 
+.subscribe-form {
+    height: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe-form i {
+    width: 25px;
+    line-height: 25px;
+}
+
+.tbox {
+    border: none;
+    outline: none;
+}
+
+.sub-btn {
+    border: none;
+    outline: none;
+    background: #63676f;
+    color: white;
+    padding: 0 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
 .copyright {
     text-align: center;
 }
+
 /*End of Orges CSS*/
