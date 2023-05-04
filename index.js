@@ -53,9 +53,9 @@ app.post('/send', (req, res) => {
 });
 
 
-app.get('/', (req, res) => {
+ /*app.get('/', (req, res) => {
     res.render("header-footer")
-});
+}); */
 const clothe = require('./controllers/clothe.js');
 
 
@@ -73,7 +73,7 @@ app.set('view engine', 'handlebars');
 app.use('/clothe', clothe);
 */
 app.get("/", (req, res) => {
-    res.render("home")
+    res.render("home" ,"header-footer")
 })
 
 app.get("/home", (req, res) => {
