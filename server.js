@@ -48,7 +48,7 @@ app.post('/send', (req, res) => {
 
 
 app.get('/', (req, res) => {
-  res.render("login")
+  res.render("footer-header")
 });
 
 
