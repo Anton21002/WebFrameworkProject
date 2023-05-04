@@ -38,6 +38,7 @@ header {
 }
 
 .navigation a {
+    align-items: center;
     position: relative;
     font-size: 1.3em;
     color: #fff;
@@ -314,7 +315,7 @@ ul {
 }
 
 .app-logo {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .app-logo img {
@@ -326,6 +327,32 @@ ul {
     background: #b5b5b5;
     height: 1px;
     margin: 20px 0;
+}
+
+.subscribe-form {
+    height: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.subscribe-form i {
+    width: 25px;
+    line-height: 25px;
+}
+
+.tbox {
+    border: none;
+    outline: none;
+}
+
+.sub-btn {
+    border: none;
+    outline: none;
+    background: #63676f;
+    color: white;
+    padding: 0 10px;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 .copyright {
