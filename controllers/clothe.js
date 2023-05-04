@@ -1,4 +1,4 @@
-const express = require('express');
+/*const express = require('express');
 const exphbs = require('express-handlebars');
 const mongoose = require('mongoose');
 const router = express.Router();
@@ -7,7 +7,7 @@ const path = require('path');
 const Clothe = require('../models/Clothe');
 
 const dbURI = 'mongodb+srv://'+ process.env.DBUSER +':'+ process.env.DBPASSWD +''+ process.env.CLUSTER +'.mongodb.net/'+ process.env.DB +'?retryWrites=true&w=majority'
-mongoose.connect(dbURI)
+mongoose.(dbURI)
 
 // Create and Update a record
 router.get('/', (req,res) => {
@@ -93,4 +93,4 @@ router.get('/delete/:id', async (req, res) => {
   }
 });
 
-module.exports = router;
+module.exports = router;*/
