@@ -108,6 +108,7 @@ header {
 
 .wrapper.active {
     height: 520px;
+    margin-bottom: 75px;
 }
 
 .wrapper .form-box {

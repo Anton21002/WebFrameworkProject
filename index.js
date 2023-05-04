@@ -27,7 +27,7 @@ const transporter = nodemailer.createTransport({
     service: 'hotmail',
     auth: {
         user: 'orgesgashi41@outlook.com',
-        pass: 'Node1@' /*actual password*/
+        pass: 'Nodejs1@' /*actual password*/
     },
     tls: {
         rejectUnauthorized: false
@@ -53,9 +53,7 @@ app.post('/send', (req, res) => {
 });
 
 
- /*app.get('/', (req, res) => {
-    res.render("header-footer")
-}); */
+ 
 const clothe = require('./controllers/clothe.js');
 
 
@@ -73,8 +71,11 @@ app.set('view engine', 'handlebars');
 app.use('/clothe', clothe);
 */
 app.get("/", (req, res) => {
-    res.render("home" ,"header-footer")
+    res.render("home")
 })
+app.get('/header-footer', (req, res) => {
+    res.render("header-footer")
+}); 
 
 app.get("/home", (req, res) => {
     res.render("home")

@@ -1,9 +1,18 @@
-<h1>{{pagetitle}}</h1>
+
 {{#if desc}}
     <p class="descript">{{desc}}</p>
 {{else}}
     <p>No content</p>
 {{/if}}
+<header>
+      <h2 class="logo">StreetWear</h2>
+      <nav class="navigation">
+        <a href="#">Men</a>
+        <a href="#">Women</a>
+        <a href="#">Kids</a>
+        <a href="#">Sale</a>
+      </nav>
+    </header>
 
 <div class="indexcards">
     {{#each items}}
@@ -27,3 +36,51 @@
 <!--add Image by rawpixel.com on Freepik to the 2nd and 4th picture in the footer
 add Image by luis_molinero on Freepik to the 3rd picture in the footer
  -->
+ <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                  <h3>Dowload our app</h3>
+                  <p>Download App for Android and iOS mobile phone.</p>
+                  <div class="app-logo">
+                    <a href="#"><img src="play-store.png"></a>
+                    <a href="#"><img src="app-store.png"></a>
+                  </div>
+                </div>
+                <div class="footer-col-2">
+                  <h3>Useful Links</h3>
+                  <ul>
+                    <li><a href="#">Coupons</a></li>
+                    <li><a href="#">Blog Post</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Join us</a></li>
+                  </ul>
+                </div>
+                <div class="footer-col-3">
+                  <h3>Follow us</h3>
+                  <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li>Join our Newsletter</li>
+                  </ul>
+                  <form class="subscribe-form" action="/send" method="POST">
+                    <i><ion-icon name="mail-outline"></ion-icon></i>
+                    <input class="tbox" type="email" name="email" placeholder="Enter your email">
+                    <button class="sub-btn" type="submit">Subscribe</button>
+                  </form>
+                  <div class="email-sent">{{msg}}</div>
+                </div>
+                <div class="footer-col-4">
+                  <h3>Contact</h3>
+                  <ul>
+                    <li><ion-icon name="location-outline"></ion-icon>  Location: Visamaki, Hameenlinna 13000</li>
+                    <li><ion-icon name="call-outline"></ion-icon> Phone number: 040 4342 5534</li>
+                    <li><ion-icon name="mail-outline"></ion-icon> Email address: streetwear@gmail.com</li>
+                  </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright 2023 - Shopping website "StreetWear"</p>
+        </div>
+    </div>
