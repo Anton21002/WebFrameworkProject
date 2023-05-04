@@ -55,6 +55,7 @@ app.post('/send', (req, res) => {
 
  
 const clothe = require('./controllers/clothe.js');
+const { listIndexes } = require('./models/Clothe');
 
 
 /*app.set('views', path.join(__dirname, '/views/'));
@@ -78,9 +79,10 @@ app.get('/header-footer', (req, res) => {
 }); 
 
 app.get("/home", (req, res) => {
-    res.render("home")
-})
-
+    res.render("home", {
+        
+        }); 
+    });        
 app.get("/login", (req, res) => {
     res.render("login")
 })
