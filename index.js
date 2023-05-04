@@ -67,9 +67,9 @@ app.engine('handlebars', exphbs.engine({
     layoutsDir: __dirname + '/views/layouts/'
 }));
 app.set('view engine', 'handlebars');
-
-app.use('/clothe', clothe);
 */
+app.use('/clothe', clothe);
+
 app.get("/", (req, res) => {
     res.render("home")
 })
