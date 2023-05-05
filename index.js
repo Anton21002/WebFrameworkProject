@@ -10,6 +10,7 @@ const { error } = require('console');
 const bodyParser = require('body-parser')
 const nodemailer = require('nodemailer');
 const tempelatePath = path.join(__dirname, '../WebFrameworkProject/views')
+const Clothe = require('../WebFrameworkProject/models/Clothe');
 
 app.use(express.json())
 app.set("view engine", "hbs")
@@ -56,6 +57,7 @@ app.post('/send', (req, res) => {
  
 const clothe = require('./controllers/clothe.js');
 const { listIndexes } = require('./models/Clothe');
+const { type } = require('os');
 
 
 /*app.set('views', path.join(__dirname, '/views/'));
@@ -78,11 +80,21 @@ app.get('/header-footer', (req, res) => {
     res.render("header-footer")
 }); 
 
-app.get("/home", (req, res) => {
-    res.render("home", {
+app.get("/home", (req, res) => { 
+        Clothe.find() 
+        .then(docs => {
+          // console.log(docs);
+         // console.log( typeof docs) ;
+           let items = docs
+          res.render("home", {
+            items: items
+          });
+        })
+        .catch(err => {
+          console.log('Error while retrieving data: ' + err);
+        })});
         
-        }); 
-    });        
+                
 app.get("/login", (req, res) => {
     res.render("login")
 })
